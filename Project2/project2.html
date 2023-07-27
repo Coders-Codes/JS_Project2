@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selling Items</title>
+  </head>
+  <body>
+    <form onsubmit="saveTocrud(event)">
+      <h1>Store</h1>
+      <div></div>
+      <label for="selling">Selling Price:</label>
+      <input
+        type="number"
+        min="1"
+        max="1000000"
+        id="selling"
+        required
+      /><br /><br />
+
+      <label for="product">Product Name:</label>
+      <input type="text" id="product" required /><br /><br />
+
+      <label for="category">Choose a Category:</label>
+      <select name="Category" id="category">
+        <option value="no-type">Select your Type</option>
+        <option value="electronics">Electronics</option>
+        <option value="food">Food</option>
+        <option value="skincare">Skincare</option></select
+      ><br /><br />
+
+      <label for="Submit"></label>
+      <input type="submit" id="Submit" value="Add Product" />
+
+      <h2>Products</h2>
+
+      <div id="items-container">
+        <h3>Electronic Items</h3>
+        <ul id="listofelectronic"></ul>
+        <h3>Food Items</h3>
+        <ul id="listoffood"></ul>
+        <h3>Skincare Items</h3>
+        <ul id="listofskincare"></ul>
+      </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+
+    <script src="project2.js"></script>
+  </body>
+</html>
