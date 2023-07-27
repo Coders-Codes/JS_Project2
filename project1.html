@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <form onsubmit="saveToLocalStorage(event)">
+        
+    <h1 style="color:brown">Expense Tracker</h1>
+    <fieldset style="background-color: rgb(194, 194, 194);">
+        <legend>
+            <b>Data of Expenses</b>
+        </legend>
+    <label for="amount">Choose Expense Amount:</label><br>
+    <input type="number"  min="1" max="100000" id="amount" name="expense"><br/><br/>
+
+    <label for="description">Choose Description:</label><br/>
+    <input type="text" id="description" name="des"><br/><br/>
+
+    <label for="category">Choose a Category:</label>
+    <select name="Category" id="category">
+        <option value="food">Food</option>
+        <option value="grocery">Grocery</option>
+        <option value="fuel">Fuel</option>
+        <option value="travel">Travel</option>
+        <option value="electricity bill">Electricity Bill</option>
+        <option value="movie">Movie</option>
+        <option value="misc">Miscellaneous</option>
+    </select><br/><br/>
+
+    <label for="Submit"></label>
+    <input type="submit" id="Submit" value="Add Expense">
+</fieldset>
+</form>
+<ul id="listofitems"></ul>
+<script src="project1.js"></script>
+
+</body>
+</html>
